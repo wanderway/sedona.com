@@ -1,0 +1,221 @@
+.main-navigation {
+  height: 55px;
+
+  &__items {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 0;
+
+    list-style: none;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 94px);
+    z-index: 10;
+
+    width: 188px;
+    height: 96px;
+
+    background: url("../../img/logotype-desktop.png");
+  }
+
+  &__sandwich {
+    display: none;
+  }
+
+  &__exit-button {
+    display: none;
+  }
+
+  &__item {
+    display: inline-block;
+    min-width: 25%;
+    max-height: 55px;
+
+    line-height: 55px;
+    text-align: center;
+
+    &:nth-child(3) {
+      padding-left: 95px;
+    }
+
+    &:nth-child(2) {
+      padding-right: 95px;
+    }
+
+    &--active {
+      position: relative;
+
+      & span {
+        color: #766357;
+      }
+
+      &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        display: inline-block;
+        width: 100%;
+        height: 5px;
+
+        background: #766357;
+
+        content: "";
+      }
+    }
+  }
+
+  &__link {
+    padding: 18.5px 5px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+
+    color: #000000;
+
+    transition: .4s;
+
+    &:hover {
+      color: #81b3d2;
+
+      transition: .5s;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .main-navigation {
+    &__logo {
+      left: calc(50% - 51px);
+
+      width: 102px;
+
+      background: url("../../img/logotype-tablet.png") no-repeat;
+    }
+
+    &__item {
+
+      &:nth-child(3) {
+        padding-left: 70px;
+      }
+
+      &:nth-child(2) {
+        padding-right: 70px;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+  .main-navigation {
+    height: 275px;
+    padding-bottom: 55px;
+
+    &__items {
+      background: #81b3d2;
+    }
+
+    &__item {
+      display: block;
+
+      border-bottom: 1px solid #678fa8;
+      border-top: 1px solid #9ac2db;
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+        box-shadow: inset 0 -10px 15px -10px grey;
+      }
+
+      &:nth-child(3) {
+        padding-left: 0;
+      }
+
+      &:nth-child(2) {
+        padding-right: 0;
+      }
+    }
+
+    &__link {
+      padding: 18.5px 100px;
+
+      color: #ffffff;
+
+      &:hover {
+        color: #766357;
+      }
+    }
+
+    &__logo {
+      top: 213px;
+
+      display: block;
+
+      background: url("../../img/logotype-tablet.png") no-repeat 50%;
+    }
+
+
+    &__sandwich {
+      position: absolute;
+      right: 20px;
+      top: 230px;
+
+      display: inline-block;
+
+      cursor: pointer;
+    }
+
+    &__sandwich-bar {
+      width: 35px;
+      height: 5px;
+      margin: 6px 0;
+
+      background-color: #81b3d2;
+    }
+
+    &__exit-button {
+      position: absolute;
+      right: 25px;
+      top: 15px;
+
+      display: block;
+      width: 25px;
+      height: 25px;
+
+      &:after,
+      &:before {
+        position: absolute;
+        top: 10px;
+        left: 0;
+
+        width: 23px;
+        height: 4px;
+
+        background: #ffffff;
+
+        content: "";
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+
+      &:before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

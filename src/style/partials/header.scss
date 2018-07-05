@@ -1,224 +1,76 @@
-.main-navigation {
-  max-height: 55px;
-  &__items {
-    position: relative;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0;
-  }
-  &__logo {
-    position: absolute;
-    background: url("../../img/logotype-desktop.png");
-    min-width: 188px;
-    min-height: 96px;
-    top: 0;
-    left: calc(50% - 94px);
-  }
-  &__sandwich {
-    display: none;
-  }
-  &__exit-button {
-    display: none;
-  }
-  &__item {
-    display: inline-block;
-    line-height: 55px;
-    min-width: 25%;
-    max-height: 55px;
-    text-align: center;
-  }
-  &__item:nth-child(3) {
-    padding-left: 95px;
-  }
-  &__item:nth-child(2) {
-    padding-right: 95px;
-  }
-  &__item a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    color: #000000;
-    padding: 18.5px 5px;
-    transition: .4s;
-  }
-  &__item a:hover {
-    color: #81b3d2;
-    transition: .5s;
-  }
-  &__item--active a {
-    color: #766357;
-  }
-  &__item--active {
-    position: relative;
-  }
-  &__item--active:after {
-      width: 100%;
-      height: 5px;
-      background: #766357;
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      content: "";
-  }
-}
-
 .header {
-  &__background {
-    min-height: 300px;
-    background: url("../../img/back-desktop.png") no-repeat;
-    padding-top: 100px;
-  }
+  position: relative;
+
+  height: 518px;
+  padding: 80px 0 140px 0;
+
+  background: url("../../img/fullsize-background.jpg") no-repeat center center;
+
   &__title {
-    min-height: 80px;
-    background: url("../../img/text-sedona.png") no-repeat 50%;
-    margin-bottom: 61px;
+    height: 350px;
+
+    background: url("../../img/text-index-tablet.png") no-repeat 50%;
   }
+
   &__geometry {
+    position: absolute;
+    bottom: 0;
+
+    height: 57px;
     width: 100%;
-    min-height: 57px;
-    background: url("../../img/intro-triangle.png");
+
+    background: url("../../img/intro-triangle.png") center center;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .main-navigation {
-    &__item:nth-child(3) {
-      padding-left: 70px;
-    }
-    &__item:nth-child(2) {
-      padding-right: 70px;
-    }
-    &__logo {
-      background: url("../../img/logotype-tablet.png") no-repeat;
-      left: calc(50% - 51px);
-      min-width: 102px;
 
-    }
-  }
   .header {
-    &__background {
-      min-height: 518px;
-      background: url("../../img/fullsize-background.jpg") no-repeat top;
-      padding-top: 70px;
-    }
+    height: 518px;
+    padding: 80px 0 90px 0;
+
+    background: url("../../img/fullsize-background.jpg") no-repeat top;
+
     &__title {
-      min-height: 350px;
+      height: 350px;
+
       background: url("../../img/text-index-tablet.png") no-repeat 50%;
-      margin-bottom: 41px;
     }
+
     &__geometry {
-      min-height: 57px;
+      bottom: 0;
+
+      height: 57px;
+
       background: url("../../img/intro-triangle.png") no-repeat 50%;
     }
   }
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-  .main-navigation {
-    min-height: 275px;
-    &__items {
-      background: #81b3d2;
-    }
-    &__item {
-      display: block;
-      border-bottom: 1px solid #678fa8;
-      border-top: 1px solid #9ac2db;
-    }
-    &__item a {
-      color: #ffffff;
-      padding:18.5px 100px;
-    }
-    &__item a:hover {
-      color: #766357;
-    }
-    &__item--active a {
-      color: #766357;
-    }
-    &__logo {
-      display: block;
-      background: url("../../img/logotype-tablet.png") no-repeat 50%;
-      top: 213px;
 
-    }
-    &__item:first-child {
-      border-top: none;
-    }
-    &__item:last-child {
-      border-bottom: none;
-      box-shadow: inset 0 -10px 15px -10px grey;
-    }
-    &__item:nth-child(3) {
-      padding-left: 0;
-    }
-    &__item:nth-child(2) {
-      padding-right: 0;
-    }
-    &__items a:first-child {
-    }
-    &__sandwich {
-      position: absolute;
-      right: 20px;
-      bottom: 53.5%;
-      display: inline-block;
-      cursor: pointer;
-    }
-    .bar1, .bar2, .bar3 {
-      width: 35px;
-      height: 5px;
-      background-color: #81b3d2;
-      margin: 6px 0;
-    }
-    &__exit-button {
-      display: block;
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      right: 25px;
-      top: 15px;
-    }
-    &__exit-button:after,
-    &__exit-button:before {
-      content: "";
-      position: absolute;
-      top: 10px;
-      left: 0;
-      width: 23px;
-      height: 4px;
-      background: #ffffff;
-    }
-
-    &__exit-button:after{
-      transform: rotate(45deg);
-    }
-
-    &__exit-button:before{
-      transform: rotate(-45deg);
-    }
-  }
   .header {
-    &__background {
-      max-height: 390px;
-      background: url("../../img/fullsize-background.jpg") no-repeat -400px 0;
-      padding-top: 70px;
-    }
+    height: 390px;
+    padding: 90px 0 0 0;
+
+    background: url("../../img/fullsize-background.jpg") no-repeat -400px 0;
+
     &__title {
       display: block;
-      height: auto;
-      max-width: 100%;
-      min-height: 210px;
+      width: 100%;
+      height: 210px;
+
       background: url("../../img/text-index-mobile.png") no-repeat 50%;
-      margin-bottom: 41px;
     }
+
     &__geometry {
-      min-height: 57px;
+      height: 57px;
+
       background: url("../../img/intro-triangle.png") no-repeat 50%;
     }
   }
-
 }
+
 
 
 

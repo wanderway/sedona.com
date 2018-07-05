@@ -1,0 +1,31 @@
+.description {
+  height: 205px;
+  padding: 50px 0 55px 0;
+
+  font-size: 0;
+  text-align: center;
+
+  background: #ffffff;
+
+  &__title {
+    padding: 0 0 35px 0;
+
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 24px;
+  }
+  &__text {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .description {
+    padding: 35px 30px 30px;
+    &__title {
+      font-size: 18px;
+    }
+  }
+}
