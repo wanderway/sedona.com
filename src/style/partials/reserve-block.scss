@@ -1,0 +1,65 @@
+.reserve-block {
+  height: 680px;
+
+  background: #ffffff;
+
+  &__wrapper {
+    width: 460px;
+    height: 330px;
+    margin: 0 auto;
+    padding-top: 55px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 24px;
+    text-align: center;
+
+    margin: 30px 0 45px 0;
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+  }
+
+  &__map {
+    height: 350px;
+
+    background: url("../../img/map.png") no-repeat center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .reserve-block {
+    height: 635px;
+
+    &__title {
+      font-size: 21px;
+      line-height: 46px;
+    }
+
+    &__wrapper {
+      width: 280px;
+      padding-top: 25px;
+      height: 285px;
+    }
+
+    &__description {
+      margin: 10px 0 30px 0;
+
+      & br {
+        display: none;
+      }
+    }
+  }
+}
