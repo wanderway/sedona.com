@@ -23,13 +23,31 @@
   }
 }
 
+//secondary-page
+
+.header--secondary-page {
+  height: 300px;
+  padding: 110px 0 110px 0;
+
+  background-position: bottom;
+}
+
+.header {
+
+  &__title--secondary-page {
+    height: 80px;
+
+    background: url("../../img/text-sedona.png") no-repeat center;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
 
   .header {
     height: 518px;
     padding: 80px 0 90px 0;
 
-    background: url("../../img/fullsize-background.jpg") no-repeat top;
+    background: url("../../img/fullsize-background.jpg") no-repeat center;
 
     &__title {
       height: 350px;
@@ -43,6 +61,24 @@
       height: 57px;
 
       background: url("../../img/intro-triangle.png") no-repeat 50%;
+    }
+  }
+
+  //secondary-page
+
+  .header--secondary-page {
+    height: 290px;
+    padding: 105px 0 105px 0;
+
+    background-position: bottom;
+  }
+
+  .header {
+
+    &__title--secondary-page {
+      height: 80px;
+
+      background: url("../../img/text-sedona.png") no-repeat center;
     }
   }
 }
@@ -69,7 +105,27 @@
       background: url("../../img/intro-triangle.png") no-repeat 50%;
     }
   }
+
+  //secondary-page
+
+  .header--secondary-page {
+    height: 160px;
+    padding: 60px 0 60px 0;
+
+    background-position: bottom;
+  }
+
+  .header {
+
+    &__title--secondary-page {
+      height: 40px;
+
+      background: url("../../img/sedona.png") no-repeat center;
+    }
+  }
 }
+
+
 
 
 
