@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Форма для отзыва City of Sedona</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+  <div class="main-navigation container clearfix">
+    <ul class="main-navigation__items">
+      <li class="main-navigation__item">
+        <span class="main-navigation__link">главная</span>
+      </li>
+      <li class="main-navigation__item">
+        <a class="main-navigation__link" href="#">фото и видео</a>
+      </li>
+      <li class="main-navigation__item  main-navigation__item--active">
+        <a class="main-navigation__link" href="#">форма отзыва</a>
+      </li>
+      <li class="main-navigation__item">
+        <a class="main-navigation__link" href="#">html academy</a>
+      </li>
+    </ul>
+    <div class="main-navigation__sandwich">
+      <div class="main-navigation__sandwich-bar"></div>
+      <div class="main-navigation__sandwich-bar"></div>
+      <div class="main-navigation__sandwich-bar"></div>
+    </div>
+    <div class="main-navigation__exit-button"></div>
+    <div class="main-navigation__logo"></div>
+  </div>
+  <div class="header  header--secondary-page container">
+    <div class="header__title  header__title--secondary-page"></div>
+    <div class="header__geometry"></div>
+  </div>
+  <div class="description  description--secondary-page container">
+    <div class="description__title  description__title--secondary-page">оставьте свой отзыв</div>
+    <div class="description__text  description__text--secondary-page">помогите нашим отелям стать лучше! оставьте отзыв о них,<br>
+      а также о посещенных вами достопримечательностях</div>
+  </div>
+  </body>
+  <form class="form container" method="post" action="#">
+    <div class="form__first-block">
+      <div class="form__radio-column">
+        <h2 class="form__first-block-title">ваше общее впечатление:</h2>
+        <label class="form__radio-items" for="first-impression">
+          <input class="form__radio-item" type="radio" name="impression" value="impression-item" id="first-impression" checked>
+          <span class="form__radio-indicator"></span>
+          Скорее положительное
+        </label>
+        <label class="form__radio-items" for="second-impression">
+          <input class="form__radio-item" type="radio" name="impression" value="impression-item" id="second-impression">
+          <span class="form__radio-indicator"></span>
+          Скорее отрицательное
+        </label>
+        <label class="form__radio-items" for="third-impression">
+          <input class="form__radio-item" type="radio" name="impression" value="impression-item" id="third-impression">
+          <span class="form__radio-indicator"></span>
+          Затрудняюсь ответить
+        </label>
+      </div>
+      <div class="form__fullname-column">
+        <h2 class="form__first-block-title">представьтесь, пожалуйста:</h2>
+        <label for="first-name-text" class="form__name-items clearfix">
+          <div class="form__wrapper clearfix">
+            <span>имя:</span>
+            <input class="form__name-item  form__name-item--longer" type="text" name="first-name" value="Вадим" id="first-name-text">
+          </div>
+        </label>
+        <label for="surname-text" class="form__name-items clearfix">
+          <div class="form__wrapper clearfix">
+            <span>фамилия:</span>
+            <input class="form__name-item" type="text" name="surname" value="Перевоз" id="surname-text">
+          </div>
+        </label>
+        <label for="patronymic-text" class="form__name-items clearfix">
+          <div class="form__wrapper clearfix">
+            <span>отчество:</span>
+            <input class="form__name-item" type="text" name="patronymic" value="Михайлович" id="patronymic-text">
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="form__second-block container">
+        <h2 class="form__secondary-block-title">контактная инофрмация:</h2>
+        <label for="phone-number" class="form__phone">
+          <div class="form__wrapper  clearfix">
+            <span>телефон:</span>
+            <input class="form__phone-number" type="text" name="phone-number" value="Введите номер" id="phone-number">
+            <div class="form__phone-icon"></div>
+          </div>
+        </label>
+        <label for="email" class="form__email">
+          <div class="form__wrapper clearfix">
+            <span class="form__email--longer">электронная почта:</span>
+            <input class="form__email-address" type="text" name="email" value="Введите e-mail" id="email">
+            <div class="form__mail-icon"></div>
+          </div>
+        </label>
+    </div>
+    <div class="form__third-block container">
+      <h2 class="form__secondary-block-title">посещенные достопримечательности:</h2>
+      <div class="form__checkbox-wrapper clearfix">
+        <label class="form__checkbox-items" for="devil-bridge">
+          <input class="form__checkbox-item" type="checkbox" name="devil" id="devil-bridge" checked>
+          <span class="form__checkbox-indicator"></span>
+          Мост Дьявола
+        </label>
+        <label class="form__checkbox-items" for="mount">
+          <input class="form__checkbox-item" type="checkbox" name="mount" id="mount" checked>
+          <span class="form__checkbox-indicator"></span>
+          Гора-Колокол
+        </label>
+        <label class="form__checkbox-items" for="slide-park">
+          <input class="form__checkbox-item" type="checkbox" name="park" id="slide-park" checked>
+          <span class="form__checkbox-indicator"></span>
+          Слайд-парк
+        </label>
+        <label class="form__checkbox-items" for="red-mountain">
+          <input class="form__checkbox-item" type="checkbox" name="red-mount" id="red-mountain">
+          <span class="form__checkbox-indicator"></span>
+          Красные скалы
+        </label>
+        </div>
+    </div>
+    <div class="form__fourth-block container">
+      <h2 class="form__secondary-block-title">опищите свои эмоции:</h2>
+        <textarea class="form__text" name="long-text" id="text-area" rows="6">Опишите подробно все свои восторги</textarea>
+      <div class="form__fourth-block-wrapper">
+        <a class="btn  form__btn">отправить отзыв</a>
+        <span>* - обязтельное поле</span>
+      </div>
+    </div>
+  </form>
+  <div class="footer container">
+    <div class="footer__hashtag">#visitsedona</div>
+    <div class="footer__social">
+      <a href="#" class="footer__social-button  footer__twitter"></a>
+      <a href="#" class="footer__social-button  footer__facebook"></a>
+      <a href="#" class="footer__social-button  footer__youtube"></a>
+    </div>
+    <div class="footer__copyright">
+      <a class="footer__academy-link" href="#">разработано</a>
+    </div>
+  </div>
+</html>
