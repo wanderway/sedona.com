@@ -1,4 +1,4 @@
-.block-features {
+.features-block {
   padding-top: 60px;
   background: #ffffff;
   height: 330px;
@@ -44,7 +44,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .block-features {
+  .features-block {
 
     &__description {
       margin: 0 45px 0;
@@ -53,7 +53,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-  .block-features {
+  .features-block {
     height: 418px;
     padding-top: 0;
 

@@ -42,9 +42,9 @@
   </div>
   </body>
   <form class="form container" method="post" action="#">
-    <div class="form__first-block">
-      <div class="form__radio-column">
-        <h2 class="form__first-block-title">ваше общее впечатление:</h2>
+    <div class="form__double-block clearfix">
+      <div class="form__double-block-content">
+        <h2 class="form__double-block-title">ваше общее впечатление:</h2>
         <label class="form__radio-items" for="first-impression">
           <input class="form__radio-item" type="radio" name="impression" value="impression-item" id="first-impression" checked>
           <span class="form__radio-indicator"></span>
@@ -61,47 +61,41 @@
           Затрудняюсь ответить
         </label>
       </div>
-      <div class="form__fullname-column">
-        <h2 class="form__first-block-title">представьтесь, пожалуйста:</h2>
-        <label for="first-name-text" class="form__name-items clearfix">
-          <div class="form__wrapper clearfix">
+      <div class="form__double-block-content">
+        <h2 class="form__double-block-title">представьтесь, пожалуйста:</h2>
+          <div class="form__name-items clearfix">
             <span>имя:</span>
-            <input class="form__name-item  form__name-item--longer" type="text" name="first-name" value="Вадим" id="first-name-text">
+            <input class="form__name-item  form__name-item--longer" title="#" type="text" name="first-name" value="Вадим" id="first-name-text">
           </div>
-        </label>
-        <label for="surname-text" class="form__name-items clearfix">
-          <div class="form__wrapper clearfix">
+          <div class="form__name-items clearfix">
             <span>фамилия:</span>
-            <input class="form__name-item" type="text" name="surname" value="Перевоз" id="surname-text">
+            <input class="form__name-item" type="text" title="#" name="surname" value="Перевоз" id="surname-text">
           </div>
-        </label>
-        <label for="patronymic-text" class="form__name-items clearfix">
-          <div class="form__wrapper clearfix">
+          <div class="form__name-items clearfix">
             <span>отчество:</span>
-            <input class="form__name-item" type="text" name="patronymic" value="Михайлович" id="patronymic-text">
+            <input class="form__name-item" type="text" title="#" name="patronymic" value="Михайлович" id="patronymic-text">
           </div>
-        </label>
       </div>
     </div>
-    <div class="form__second-block container">
-        <h2 class="form__secondary-block-title">контактная инофрмация:</h2>
-        <label for="phone-number" class="form__phone">
-          <div class="form__wrapper  clearfix">
-            <span>телефон:</span>
-            <input class="form__phone-number" type="text" name="phone-number" value="Введите номер" id="phone-number">
-            <div class="form__phone-icon"></div>
-          </div>
-        </label>
-        <label for="email" class="form__email">
-          <div class="form__wrapper clearfix">
-            <span class="form__email--longer">электронная почта:</span>
-            <input class="form__email-address" type="text" name="email" value="Введите e-mail" id="email">
-            <div class="form__mail-icon"></div>
-          </div>
-        </label>
+    <div class="form__content-block clearfix container">
+      <h2 class="form__content-block-title">контактная инофрмация:</h2>
+      <div class="form__contacts  form__contacts--padding">
+        <div class="form__wrapper  clearfix">
+          <span class="form__span-text">телефон:</span>
+          <input class="form__text-line" type="text" title="#" name="phone-number" value="Введите номер" id="phone-number">
+          <div class="form__phone-icon"></div>
+        </div>
+      </div>
+      <div class="form__contacts">
+        <div class="form__wrapper  clearfix">
+          <span class="form__span-text  form__span-text--padding">электронная почта:</span>
+          <input class="form__text-line" type="text" title="#" name="email" value="Введите e-mail" id="email">
+          <div class="form__mail-icon"></div>
+        </div>
+      </div>
     </div>
-    <div class="form__third-block container">
-      <h2 class="form__secondary-block-title">посещенные достопримечательности:</h2>
+    <div class="form__content-block container">
+      <h2 class="form__content-block-title">посещенные достопримечательности:</h2>
       <div class="form__checkbox-wrapper clearfix">
         <label class="form__checkbox-items" for="devil-bridge">
           <input class="form__checkbox-item" type="checkbox" name="devil" id="devil-bridge" checked>
@@ -125,10 +119,10 @@
         </label>
         </div>
     </div>
-    <div class="form__fourth-block container">
-      <h2 class="form__secondary-block-title">опищите свои эмоции:</h2>
+    <div class="form__content-block container">
+      <h2 class="form__content-block-title">опищите свои эмоции:</h2>
         <textarea class="form__text" name="long-text" id="text-area" rows="6">Опишите подробно все свои восторги</textarea>
-      <div class="form__fourth-block-wrapper">
+      <div class="form__content-block-wrapper">
         <a class="btn  form__btn">отправить отзыв</a>
         <span>* - обязтельное поле</span>
       </div>

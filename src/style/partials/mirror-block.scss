@@ -1,18 +1,18 @@
-.bridge-block {
-  height: 256px;
-  background: #81b3d2;
+.mirror-block {
+    min-height: 256px;
+    background: #81b3d2;
 
   &__info {
     width: 33.33%;
-    float: right;
+    float: left;
     padding-top: 65px;
-
+    
     font-size: 14px;
     text-transform: uppercase;
     text-align: center;
 
     color: #ffffff;
-  }
+    }
 
   &__title {
     font-weight: bold;
@@ -26,18 +26,27 @@
   &__photo {
     width: 66.66%;
     height: 256px;
+    float: right;
+
+    background: url("../../img/photo-city.png") center center;
+  }
+  &__geometry {
+    display: none;
+  }
+
+  &__info--right {
+    float: right;
+  }
+
+  &__photo--left {
     float: left;
 
     background: url("../../img/photo-bridge.png") center center;
   }
-
-  &__geometry {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .bridge-block {
+  .mirror-block {
 
     &__info {
       padding: 45px 50px 0;
@@ -46,7 +55,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-  .bridge-block {
+  .mirror-block {
     height: 500px;
     position: relative;
 

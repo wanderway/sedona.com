@@ -1,5 +1,5 @@
 .description {
-  height: 205px;
+  min-height: 205px;
   padding: 50px 0 55px 0;
 
   font-size: 0;
@@ -25,7 +25,7 @@
 //secondary-page
 
 .description--secondary-page {
-  height: 290px;
+  min-height: 290px;
   padding: 110px 0 0 0;
 }
 
@@ -42,7 +42,7 @@
 //secondary-page
 
   .description--secondary-page {
-    height: 250px;
+    min-height: 250px;
     padding: 80px 0 0 0;
   }
 
@@ -59,7 +59,7 @@
   //secondary-page
 
   .description--secondary-page {
-    height: 190px;
+    min-height: 190px;
     padding: 40px 25px 0;
   }
 

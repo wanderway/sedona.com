@@ -44,7 +44,7 @@
   }
 
   &__like {
-
+    height: 80px;
     float: right;
     padding-left: 35px;
 
@@ -56,17 +56,26 @@
     color: #ffffff;
     cursor: pointer;
 
+    transition: .5s;
+
     &:after {
       position: absolute;
-      top: 27px;
+      top: -1px;
       right: 65px;
+      padding: 29.5px 0;
 
       width: 23px;
       height: 21px;
 
-      background: url("../../img/like-icon.png");
+      background: url("../../img/like-icon.png") no-repeat center;
 
       content: "";
+    }
+
+    &:hover {
+      color: darkgray;
+
+      transition: .5s;
     }
   }
 
@@ -95,7 +104,7 @@
 
 @media (min-width: 700px) and (max-width: 900px) {
   .photo-block {
-    height: 1174px;
+    min-height: 1174px;
     padding: 0 60px;
 
     background: #ffffff;
@@ -129,7 +138,7 @@
 
 @media (min-width: 320px) and (max-width: 700px) {
   .photo-block{
-    height: 1520px;
+    min-height: 1520px;
     background: #81b3d2;
 
 

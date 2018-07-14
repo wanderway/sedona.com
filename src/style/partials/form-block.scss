@@ -1,26 +1,21 @@
 .form {
   width: 100%;
-  height: 1255px;
+  min-height: 1200px;
   padding: 0 120px;
 
   background: #ffffff;
 
-  &__first-block {
+  &__double-block {
     width: 100%;
-    height: 400px;
+    min-height: 400px;
   }
 
-  &__radio-column {
+  &__double-block-content {
     float: left;
     width: 50%;
   }
 
-  &__fullname-column {
-    float: left;
-    width: 50%;
-  }
-
-  &__first-block-title {
+  &__double-block-title {
     margin: 0 0 65px 0;
     padding-left: 80px;
 
@@ -93,17 +88,6 @@
     }
   }
 
-  &__wrapper {
-    width: 100%;
-
-    & span {
-      float: left;
-      width: 19%;
-
-      text-align: center;
-    }
-  }
-
   &__name-item {
     float: right;
     width: 77%;
@@ -117,13 +101,51 @@
     background: #f2f2f2;
   }
 
-  &__second-block {
-    height: 215px;
+  &__content-block {
+    height: auto;
+    text-align: center;
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts {
+
+    float: left;
+    width: 50%;
+    max-height: 55px;
+    padding: 0 0 0 40px;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 55px;
+  }
+
+  &__span-text {
+    float: left;
+    width: 26%;
+
     text-align: center;
   }
 
-  &__secondary-block-title {
-    margin: 0 0 75px 0;
+  &__span-text--padding {
+    padding-top: 10px;
+    line-height: 18px;
+  }
+
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__contacts--padding {
+    padding:0 40px 0 0;
+  }
+
+  &__content-block-title {
+    margin: 0 0 60px 0;
 
     font-size: 21px;
     line-height: 26px;
@@ -154,19 +176,12 @@
     }
   }
 
-  &__phone {
-    float: left;
-    width: 50%;
-    padding-right: 80px;
+  &__text-line {
+    position: relative;
 
-    font-size: 14px;
-    text-transform: uppercase;
-    line-height: 55px;
-  }
-
-  &__phone-number {
+    max-height: 55px;
     float: left;
-    width: 80%;
+    width: 74%;
     padding-left: 20px;
 
     line-height: 55px;
@@ -187,38 +202,6 @@
     background: #e6e6e6 url("../../img/phone.png") no-repeat center center;
   }
 
-  &__email {
-    float: left;
-    width: 50%;
-
-    font-size: 14px;
-    text-transform: uppercase;
-    line-height: 14px;
-  }
-  &__wrapper {
-    position: relative;
-
-    & span.form__email--longer {
-      width: 30%;
-      padding-top: 20.5px;
-    }
-  }
-
-  &__email-address {
-    position: relative;
-
-    float: right;
-    width: 66.67%;
-    padding-left: 20px;
-
-    line-height: 55px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-
-    background: #f2f2f2;
-  }
-
   &__mail-icon {
     position: absolute;
     right: 0;
@@ -229,11 +212,6 @@
     background: #e6e6e6 url("../../img/mail.png") no-repeat center center;
   }
 
-  &__third-block {
-    height: 215px;
-
-    text-align: center;
-  }
 
   &__checkbox-wrapper {
     font-size: 18px;
@@ -314,7 +292,7 @@
     background: #f2f2f2;
   }
 
-  &__fourth-block-wrapper {
+  &__content-block-wrapper {
       height: 60px;
     & span {
       float: right;
@@ -338,7 +316,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .form {
     padding: 0 60px;
-    height: 1330px;
+    height: 1350px;
 
     &__name-items {
       padding-left: 40px;
@@ -348,33 +326,36 @@
       width: 75%;
     }
 
-    &__second-block {
-      height: 300px;
-  }
+    &__content-block {
+      height: auto;
+    }
 
-    &__phone {
+    &__contacts {
       display: block;
       float: none;
       width: 100%;
-      padding-right: 0;
+      min-height: 110px;
+      padding: 0 0 0 0;
 
       text-align: center;
     }
-    &__email {
-      display: block;
+
+    &__content-block-title {
+      margin-bottom: 20px;
+    }
+
+    &__text-line {
+      width: 100%;
       float: none;
+    }
+
+    &__span-text {
       width: 100%;
     }
 
-    &__wrapper {
-
-      & span {
-        float: none;
-        width: 100%;
-      }
-    }
-    &__phone-number {
-      float: none;
+    &__span-text--padding {
+      padding: 0;
+      line-height: 55px;
       width: 100%;
     }
 
@@ -384,25 +365,6 @@
 
     &__mail-icon {
       top: 55px;
-    }
-
-    &__secondary-block-title {
-      margin-bottom: 20px;
-    }
-
-    &__email-address {
-      display: block;
-      float: none;
-      width: 100%;
-    }
-
-    &__email--longer {
-      line-height: 55px;
-      text-align: left;
-    }
-
-    &__third-block {
-      height: 240px;
     }
 
     &__checkbox-wrapper {
@@ -436,25 +398,20 @@
 
 @media (min-width: 320px) and (max-width: 768px) {
   .form {
-    padding: 20px 20px 0;
+    padding: 0 20px 0;
     height: auto;
 
-    &__first-block {
-      height: auto;
+    &__double-block {
+      min-height: auto;
     }
 
-    &__radio-column {
+    &__double-block-content {
       float: none;
       width: 100%;
-    }
-
-    &__fullname-column {
       padding: 25px 0 0;
-      float: none;
-      width: 100%;
     }
 
-    &__first-block-title {
+    &__double-block-title {
       padding-left: 0;
       font-size: 18px;
       margin: 0 0 20px;
@@ -475,52 +432,44 @@
       width: 49%;
     }
 
-    &__second-block {
+    &__content-block {
       padding-top: 25px;
       height: auto;
+      margin-bottom: 20px;
     }
 
-    &__secondary-block-title {
+    &__content-block-title {
       font-size: 18px;
       text-align: center;
-      margin: 14px 0;
+      margin-bottom: 15px;
 
       &:before,
       &:after {
         display: none;
       }
     }
-    &__phone {
+    &__contacts {
       display: block;
       float: none;
       width: 100%;
-      padding-right: 0;
+      min-height: 110px;
+      padding: 0 0 0 0;
 
       text-align: center;
     }
-    &__email {
-      display: block;
-      float: none;
+
+    &__text-line {
       width: 100%;
-      margin-bottom: 30px;
-    }
-
-     &__email-address {
-       width: 100%;
-     }
-
-    &__wrapper {
-
-      & span {
-        float: none;
-        width: 100%;
-      }
-      & span.form__email--longer {
-        line-height: 55px;
-      }
-    }
-    &__phone-number {
       float: none;
+    }
+
+    &__span-text {
+      width: 100%;
+    }
+
+    &__span-text--padding {
+      padding: 0;
+      line-height: 55px;
       width: 100%;
     }
 
@@ -532,10 +481,6 @@
       top: 55px;
     }
 
-    &__third-block {
-      height: auto;
-    }
-
     &__checkbox-items {
 
       display: inline-block;
@@ -545,18 +490,13 @@
       &:last-child {
         margin-bottom: 0;
       }
-
-
     }
-    &__fourth-block-wrapper {
+
+    &__content-block-wrapper {
 
       & span {
         display: none;
       }
-    }
-
-    &__fourth-block {
-      height: auto;
     }
 
     &__btn {
